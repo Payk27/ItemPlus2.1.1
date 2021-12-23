@@ -19,14 +19,13 @@ import net.minecraftforge.event.entity.living.PotionEvent;
 
 public class SharpSickle extends ItemSword implements IHasModel
 {
-    public static final Item.ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("sharpsickle", 2, 3000, 50.0F, 6.0F, 10);
-    public SharpSickle(String name, ToolMaterial material)
-    {
+    public static final Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial("sharpsickle", 2, 3000, 50.0F, 6.0F, 10);
+    public SharpSickle(String name, ToolMaterial material) {
         super(material);
         this.setRegistryName(name) ;
         this.setUnlocalizedName(name);
         setCreativeTab(CreativeTabs.COMBAT);
-        InitItems.ITEMS.add(this);
+        InitItems.items.add(this);
     }
     @Override
     public void registerModels()
@@ -49,6 +48,6 @@ public class SharpSickle extends ItemSword implements IHasModel
     }
     public EnumRarity getRarity(ItemStack stack)
     {
-        return InitItems.RARITY_RAR;
+        return InitItems.rRar;
     }
 }

@@ -13,7 +13,7 @@ public class BlockBlack extends Block {
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
         setCreativeTab(CreativeTabs.COMBAT);
-        BlocksRegister.MBLOCKS.add(this);
+        BlocksRegister.mblock.add(this);
     }
     @Override
     public boolean isOpaqueCube(IBlockState state)

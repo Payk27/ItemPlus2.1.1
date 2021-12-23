@@ -12,14 +12,13 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class LovLVLSword extends ItemSword implements IHasModel
 {
-    public static final Item.ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("llvlsw", 2, 3000, 50.0F, 0.0F, 10);
-    public LovLVLSword(String name, Item.ToolMaterial material)
-    {
+    public static final Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial("llvlsw", 2, 3000, 50.0F, 0.0F, 10);
+    public LovLVLSword(String name, Item.ToolMaterial material) {
         super(material);
         this.setRegistryName(name) ;
         this.setUnlocalizedName(name);
         setCreativeTab(CreativeTabs.COMBAT);
-        InitItems.ITEMS.add(this);
+        InitItems.items.add(this);
     }
     @Override
     public void registerModels()
@@ -29,6 +28,6 @@ public class LovLVLSword extends ItemSword implements IHasModel
 
     public EnumRarity getRarity(ItemStack stack)
     {
-        return InitItems.RARITY_COMMON;
+        return InitItems.rCommon;
     }
 }

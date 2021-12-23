@@ -25,14 +25,13 @@ import java.util.List;
 
 public class ScarletMadness extends ItemSword implements IHasModel
 {
-    public static final Item.ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("scarletmadness", 2, 3000, 50.0F, -3.0F, 20);
-    public ScarletMadness (String name, ToolMaterial material)
-    {
+    public static final Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial("scarletmadness", 2, 3000, 50.0F, -3.0F, 20);
+    public ScarletMadness (String name, ToolMaterial material) {
         super(material);
         this.setRegistryName(name) ;
         this.setUnlocalizedName(name);
         setCreativeTab(CreativeTabs.COMBAT);
-        InitItems.ITEMS.add(this);
+        InitItems.items.add(this);
     }
     @Override
     public void registerModels() { Main.proxy.registerItemRenderer(this,0,"inventory"); }
@@ -40,10 +39,8 @@ public class ScarletMadness extends ItemSword implements IHasModel
 
     //скорость атаки
     @Override
-    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot)
-    {
-        if (equipmentSlot == EntityEquipmentSlot.MAINHAND)
-        {
+    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
+        if (equipmentSlot == EntityEquipmentSlot.MAINHAND) {
             Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(EntityEquipmentSlot.MAINHAND);
             multimap.removeAll(SharedMonsterAttributes.ATTACK_SPEED.getName());
             multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", -1.3D, 0));
@@ -56,7 +53,7 @@ public class ScarletMadness extends ItemSword implements IHasModel
     //редкость
     public EnumRarity getRarity(ItemStack stack)
     {
-        return InitItems.RARITY_LEGENDARY;
+        return InitItems.rLegendary;
     }
     //наложение эффектов при ударе
     byte b = (byte) (Stats.chance+30);

@@ -28,7 +28,7 @@ public class FireProtector extends Item implements IHasModel {
         this.setUnlocalizedName("fireprotector");
         setCreativeTab(CreativeTabs.COMBAT);
         maxStackSize = 1;
-        InitItems.ITEMS.add(this);
+        InitItems.items.add(this);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class FireProtector extends Item implements IHasModel {
         int y = event.getEntityLiving().getPosition().getY();
         int z = event.getEntityLiving().getPosition().getZ();
         AxisAlignedBB axisAlignedBB = new AxisAlignedBB(x - 5, y - 20, z - 5, x + 5, y + 20, z + 5);
-        if (entityLivingBase.getHeldItemMainhand().getItem() == InitItems.Fire_Protector) {
+        if (entityLivingBase.getHeldItemMainhand().getItem() == InitItems.fireProtector) {
             for (Entity entity : entityLivingBase.world.getEntitiesWithinAABBExcludingEntity(entityLivingBase, axisAlignedBB)) {
                 entity.motionY+=0.07;
             }

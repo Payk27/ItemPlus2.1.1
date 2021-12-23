@@ -16,14 +16,13 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class SkyBroadsword extends ItemSword implements IHasModel
 {
-    public static final Item.ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("skybroadsword", 2, 3000, 50.0F, 16.0F, 20);
-    public SkyBroadsword(String name, ToolMaterial material)
-    {
+    public static final Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial("skybroadsword", 2, 3000, 50.0F, 16.0F, 20);
+    public SkyBroadsword(String name, ToolMaterial material) {
         super(material);
         this.setRegistryName(name) ;
         this.setUnlocalizedName(name);
         setCreativeTab(CreativeTabs.COMBAT);
-        InitItems.ITEMS.add(this);
+        InitItems.items.add(this);
     }
     @Override
     public void registerModels()
@@ -33,10 +32,8 @@ public class SkyBroadsword extends ItemSword implements IHasModel
 
 
     @Override
-    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot)
-    {
-        if (equipmentSlot == EntityEquipmentSlot.MAINHAND)
-        {
+    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
+        if (equipmentSlot == EntityEquipmentSlot.MAINHAND) {
             Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(EntityEquipmentSlot.MAINHAND);
             multimap.removeAll(SharedMonsterAttributes.ATTACK_SPEED.getName());
             multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", -2.8D, 0));
@@ -47,7 +44,7 @@ public class SkyBroadsword extends ItemSword implements IHasModel
 
     public EnumRarity getRarity(ItemStack stack)
     {
-        return InitItems.RARITY_LEGENDARY;
+        return InitItems.rLegendary;
     }
 }
 

@@ -25,7 +25,7 @@ public class BloodPotion extends Potion
     public BloodPotion() {
         super(true,0xff0000);
         setRegistryName("li","bloodpotion");
-        InitPotionsEffect.MPOTIONS.add(this);
+        InitPotionsEffect.mpotion.add(this);
         setPotionName("effect.li.bloodpotion");
         this.icon = new ResourceLocation(Reference.MODID, "textures/potions/bloodpotion.png");
     }

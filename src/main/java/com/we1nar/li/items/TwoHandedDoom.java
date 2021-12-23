@@ -15,14 +15,14 @@ import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class TwoHandedDoom extends ItemSword implements IHasModel {
-    public static final Item.ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("twohandeddoom", 2, 3000, 50.0F, 14.0F, 20);
+    public static final Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial("twohandeddoom", 2, 3000, 50.0F, 14.0F, 20);
 
     public TwoHandedDoom(String name, ToolMaterial material) {
         super(material);
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
         setCreativeTab(CreativeTabs.COMBAT);
-        InitItems.ITEMS.add(this);
+        InitItems.items.add(this);
     }
 
     @Override
@@ -31,8 +31,7 @@ public class TwoHandedDoom extends ItemSword implements IHasModel {
     }
 
     @Override
-    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot)
-    {
+    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
         if (equipmentSlot == EntityEquipmentSlot.MAINHAND) {
             Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(EntityEquipmentSlot.MAINHAND);
             multimap.removeAll(SharedMonsterAttributes.ATTACK_SPEED.getName());
@@ -44,6 +43,6 @@ public class TwoHandedDoom extends ItemSword implements IHasModel {
 
     public EnumRarity getRarity(ItemStack stack)
     {
-        return InitItems.RARITY_EPIC;
+        return InitItems.rEpic;
     }
 }

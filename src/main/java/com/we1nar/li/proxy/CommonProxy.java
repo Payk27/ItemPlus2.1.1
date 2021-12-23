@@ -1,4 +1,4 @@
-package com.we1nar.li.Proxy;
+package com.we1nar.li.proxy;
 
 import com.we1nar.li.init.BlocksRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,9 +10,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
 public class CommonProxy
 {
-    public void registerItemRenderer(Item item, int meta, String id)
-    {
-    }
+    public void registerItemRenderer(Item item, int meta, String id) {}
     public EntityPlayer getPlayerEntity(MessageContext ctx) {
         return ctx.getServerHandler().player;
     }
@@ -21,16 +19,6 @@ public class CommonProxy
     public void preInit(FMLPreInitializationEvent event) {
         BlocksRegister.register();
     }
-
-
-
-    public void init(FMLInitializationEvent event) {
-
-    }
-
-
-    public void postInit(FMLPostInitializationEvent event) {
-
-    }
-
+    public void init(FMLInitializationEvent event) {}
+    public void postInit(FMLPostInitializationEvent event) {}
 }

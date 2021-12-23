@@ -8,7 +8,7 @@ import java.util.List;
 
 public class InitPotionsEffect
 {
-    public static final List<Potion> MPOTIONS = new ArrayList<Potion>();
+    public static final List<Potion> mpotion = new ArrayList<Potion>();
 
     public static final Potion bloodPotion = new BloodPotion();
 }

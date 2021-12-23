@@ -1,6 +1,6 @@
 package com.we1nar.li.main;
 
-import com.we1nar.li.Proxy.CommonProxy;
+import com.we1nar.li.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import com.we1nar.li.reference.Reference;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -18,10 +18,7 @@ public class Main
     public static CommonProxy proxy;
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event) {}
-    public static void Init(FMLInitializationEvent event)
-    {
-
-    }
+    public static void Init(FMLInitializationEvent event) {}
     public static void postInit(FMLPostInitializationEvent event) {}
     public static final String MOD_ID = "li";
 

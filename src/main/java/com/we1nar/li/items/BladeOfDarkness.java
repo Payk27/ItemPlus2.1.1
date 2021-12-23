@@ -16,14 +16,14 @@ import net.minecraftforge.common.util.EnumHelper;
 
 
 public class BladeOfDarkness extends ItemSword implements IHasModel {
-    public static final Item.ToolMaterial TOOL_MATERIAL = EnumHelper.addToolMaterial("bladeofdarkness", 2, 3000, 50.0F, 10f, 20);
+    public static final Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial("bladeofdarkness", 2, 3000, 50.0F, 10f, 20);
 
     public BladeOfDarkness(String name, ToolMaterial material) {
         super(material);
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
         setCreativeTab(CreativeTabs.COMBAT);
-        InitItems.ITEMS.add(this);
+        InitItems.items.add(this);
     }
 
     @Override
@@ -43,6 +43,6 @@ public class BladeOfDarkness extends ItemSword implements IHasModel {
     }
 
     public EnumRarity getRarity(ItemStack stack) {
-        return InitItems.RARITY_LEGENDARY;
+        return InitItems.rLegendary;
     }
 }

@@ -11,25 +11,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BlocksRegister {
-    public static Block Block_Black = new BlockBlack("blockblack");
+    public static Block blockblack = new BlockBlack("blockblack");
     public static void register(){
-        setRegister(Block_Black);
+        setRegister(blockblack);
     }
-    private static void setRegister(Block block)
-    {
+    private static void setRegister(Block block) {
         ForgeRegistries.BLOCKS.register(block);
         ForgeRegistries.ITEMS.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
     }
     @SideOnly(Side.CLIENT)
     public static void registerRender() {
-        setRender(Block_Black);
+        setRender(blockblack);
     }
     @SideOnly(Side.CLIENT)
-    private static void setRender(Block block)
-    {
-
-    }
-    public static final List<Block> MBLOCKS = new ArrayList<Block>();
-
-    public static final Block BLOCK = new BlockBlack("blockblack");
+    private static void setRender(Block block) {}
+    public static final List<Block> mblock = new ArrayList<Block>();
+    public static final Block block = new BlockBlack("blockblack");
 }
