@@ -9,7 +9,7 @@ import net.minecraftforge.common.util.EnumHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InitItems
+public class InitItems {
     public static final List<Item> items = new ArrayList<Item>();
 
     public static final EnumRarity rLegendary = EnumHelper.addRarity("Легендарная редкость", TextFormatting.GOLD, "ЛЕГЕНДАРНОЕ");
