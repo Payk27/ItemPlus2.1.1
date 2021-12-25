@@ -19,14 +19,14 @@ public class InitItems {
 
 
     //Мои итемы
-    public static final Item skybroadsword =new SkyBroadsword("skybroadsword", SkyBroadsword.TOOL_MATERIAL);
-    public static final Item sharpsickle =new SharpSickle("sharpsickle", SharpSickle.TOOL_MATERIAL);
-    public static final Item bladeofdarkness =new BladeOfDarkness("bladeofdarkness", BladeOfDarkness.TOOL_MATERIAL);
-    public static final Item swordofchains =new SwordOfChains("swordofchains", SwordOfChains.TOOL_MATERIAL);
-    public static final Item llvlsw =new LovLVLSword("llvlsw", LovLVLSword.TOOL_MATERIAL);
-    public static final Item sawsword =new SawSword("sawsword", com.we1nar.li.items.SawSword.TOOL_MATERIAL);
-    public static final Item twohandeddoom =new TwoHandedDoom("twohandeddoom", TwoHandedDoom.TOOL_MATERIAL);
-    public static final Item scarletmadness =new ScarletMadness("scarletmadness", ScarletMadness.TOOL_MATERIAL);
+    public static final Item skybroadsword =new SkyBroadsword("skybroadsword", SkyBroadsword.toolMaterial);
+    public static final Item sharpsickle =new SharpSickle("sharpsickle", SharpSickle.toolMaterial);
+    public static final Item bladeofdarkness =new BladeOfDarkness("bladeofdarkness", BladeOfDarkness.toolMaterial);
+    public static final Item swordofchains =new SwordOfChains("swordofchains", SwordOfChains.toolMaterial);
+    public static final Item llvlsw =new LovLVLSword("llvlsw", LovLVLSword.toolMaterial);
+    public static final Item sawsword =new SawSword("sawsword", SawSword.toolMaterial);
+    public static final Item twohandeddoom =new TwoHandedDoom("twohandeddoom", TwoHandedDoom.toolMaterial);
+    public static final Item scarletmadness =new ScarletMadness("scarletmadness", ScarletMadness.toolMaterial);
 
     public static final Item fireProtector = new FireProtector();
 }
